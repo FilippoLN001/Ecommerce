@@ -1,0 +1,106 @@
+@import "primeng/resources/themes/lara-light-blue/theme.css";
+@import "primeng/resources/primeng.css";
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100vh; /* Usa l'altezza del viewport invece di 100% */
+    display: flex;
+    align-items: center; /* Centra verticalmente */
+    justify-content: center; /* Centra orizzontalmente */
+    background-color: #f0f2f5;
+    font-family: 'Arial', sans-serif;
+}
+
+/* Container del Form di Login */
+.login-container {
+    padding: 40px;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    border-radius: 10px;
+    max-width: 400px;
+    width: 100%;
+    /* Queste proprietà sono per gli elementi interni, non per il container stesso */
+}
+body {
+    margin: 0;
+}
+/* Form di Login */
+.login-form {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Controlli del Form (input e label) */
+.form-control {
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.form-control input {
+    width: 100%;
+    padding: 15px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    transition: border-color 0.3s;
+}
+
+.form-control input:focus {
+    border-color: #007bff;
+    outline: none;
+}
+
+.form-control label {
+    position: absolute;
+    top: -10px;
+    left: 15px;
+    background-color: #fff;
+    padding: 0 5px;
+    font-size: 14px;
+    color: #777;
+    transition: all 0.3s;
+}
+
+/* Stile per il Pulsante di Login */
+.login-btn {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #007bff;
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.login-btn:hover {
+    background-color: #0056b3;
+}
+
+.login-btn:disabled {
+    background-color: #cccccc;
+    cursor: not-allowed;
+}
+
+/* Spinner di Caricamento */
+.loading-spinner {
+    border: 4px solid #f3f3f3;
+    border-top: 4px solid #3498db;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    animation: spin 1s linear infinite;
+    margin: 20px auto;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* Messaggi di Errore */
+.error-message {
+    color: #ff0000;
+    text-align: center;
+    margin-top: 20px;
+}

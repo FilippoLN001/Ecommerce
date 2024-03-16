@@ -1,0 +1,37 @@
+body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+  }
+  
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    background-color: #f8f9fa;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  }
+  
+  .nav-items a, .nav-auth a {
+    text-decoration: none;
+    color: #333;
+    margin-left: 20px;
+    font-size: 16px;
+  }
+  
+  .nav-auth a.register-btn {
+    padding: 8px 16px;
+    background-color: #007bff;
+    color: #fff;
+    border-radius: 4px;
+  }
+  
+  .nav-auth a.register-btn:hover {
+    background-color: #0056b3;
+  }
+  
+  .nav-logo .material-icons {
+    font-size: 24px;
+    color: #333;
+  }
+  

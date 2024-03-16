@@ -1,0 +1,71 @@
+/* Stile generale per la lista prodotti */
+.prodotto {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 1px solid #ccc; /* Bordo leggero per ogni prodotto */
+    margin-bottom: 20px; /* Spaziatura tra i prodotti */
+    padding: 10px;
+    border-radius: 8px; /* Bordi arrotondati per un aspetto più morbido */
+    background-color: #f9f9f9; /* Sfondo leggermente grigio per ogni elemento della lista */
+    max-width: 300px; /* Limita la larghezza massima di ogni prodotto */
+    box-shadow: 0 4px 6px rgba(0,0,0,1.3); /* Sottile ombra per profondità */
+    transition: transform 0.5s ease, box-shadow 0.5s ease; /* Transizione per l'effetto hover */
+    flex: 0 0 auto;
+    width: 300px;
+    margin-right: 20px;
+    border-radius: 10px;
+    padding: 10px;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* Ombra leggera */
+  }
+  .prodotto:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 24px rgba(0,0,0,0.2);
+  }
+  .prodotto h2 {
+    color: #333; /* Colore del titolo */
+    font-size: 20px; /* Dimensione del titolo */
+    margin: 10px 0; /* Spaziatura sopra e sotto il titolo */
+  }
+  
+  .prodotto img {
+    width: 100%; /* Larghezza immagine per adattarsi al contenitore */
+    height: auto; /* Altezza automatica per mantenere le proporzioni */
+    border-radius: 5px; /* Bordi arrotondati per le immagini */
+  }
+  
+  .prodotto p {
+    color: #666; /* Colore del testo */
+    font-size: 16px; /* Dimensione del testo */
+    line-height: 1.5; /* Spaziatura delle linee */
+    margin: 5px 0; /* Spaziatura tra i paragrafi */
+  }
+  
+  /* Stile specifico per il prezzo e la data */
+  .prodotto p:nth-last-child(2),  
+  /* è utilizzata per selezionare uno o più elementi in base alla loro posizione rispetto all'ultimo figlio all'interno del loro elemento genitore. Il selettore p:nth-last-child(2) */
+  .prodotto p:last-child {
+    color: #2c3e50; /* Colore più scuro per prezzo e data */
+    font-weight: bold; /* Testo in grassetto */
+  }
+  
+  /* Stile per evidenziare la categoria */
+  .prodotto p:nth-child(3) {
+    background-color: #2ecc71; /* Sfondo verde per la categoria */
+    color: white; /* Testo bianco */
+    padding: 2px 5px; /* Padding interno */
+    border-radius: 4px; /* Bordi arrotondati */
+    margin: 10px 0; /* Spaziatura sopra e sotto */
+  }
+  /* Contenitore esterno per lo scroll orizzontale */
+  .container-prodotti {
+    display: flex;
+    overflow-x: auto;
+    padding: 20px;
+  }
+  
+  
+  
+  /* Resto del CSS come da esempio precedente */
+  

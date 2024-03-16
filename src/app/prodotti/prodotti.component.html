@@ -1,0 +1,10 @@
+<div class="container-prodotti">
+    <div *ngFor="let prodotto of listaProdotti" class="prodotto">
+      <h2>{{ prodotto.nome }}</h2>
+      <img src="{{prodotto.immagine}}" alt="{{ prodotto.nome }}">
+      <p>Categoria: {{ prodotto.categoria }}</p>
+      <p>Descrizione: {{prodotto.descrizione}}</p>
+      <p>Prezzo: {{ prodotto.prezzo | currency }}</p>
+      <p>Data di messa in vendita: {{ prodotto.data_messa_in_vendita | date }}</p>
+  </div> 
+</div>

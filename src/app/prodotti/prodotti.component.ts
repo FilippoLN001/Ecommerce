@@ -8,7 +8,7 @@ import { NavbarComponent } from '../navbar/navbar.component';
   standalone: true,
   imports: [NgFor,CurrencyPipe,DatePipe,NavbarComponent],
   templateUrl: './prodotti.component.html',
-  styleUrl: './prodotti.component.css',
+  styleUrls: ['./prodotti.component.css'],
   providers: [ProdottiService] // Se il servizio è specifico di questo componente
 })
 export class ProdottiComponent implements OnInit{
@@ -22,6 +22,7 @@ export class ProdottiComponent implements OnInit{
   caricaProdotti(): void {
     this.prodottoService.getProdotti().subscribe(
       (prodotti: Prodotto[]) => {
+       console.log('Prodotti ricevuti:', prodotti);
         this.listaProdotti = prodotti;
       },
       

@@ -1,36 +1,36 @@
 import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
-import { CommonModule, CurrencyPipe, DatePipe } from '@angular/common';
+import { CommonModule } from '@angular/common';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { ReactiveFormsModule } from '@angular/forms'; // Aggiungi questa linea
-import { FormsModule } from '@angular/forms';
+import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { PasswordModule } from 'primeng/password';
+import { BrowserModule } from '@angular/platform-browser';
+import { HttpClientModule } from '@angular/common/http'; // Assicurati di importarlo
+
+import { RouterOutlet } from '@angular/router';// Assumi che tu abbia definito le tue rotte qui
+import { AppComponent } from './app.component'; // Il tuo componente radice
 import { ProdottiComponent } from './prodotti/prodotti.component';
 import { LoginComponent } from './login/login.component';
 
-import { ProdottoModule } from './models/prodotto.module';
-import { BrowserModule } from '@angular/platform-browser';
-import { RouterOutlet } from '@angular/router';
-
 @NgModule({
-  declarations: [],
+  declarations: [
+    // Qui dichiari i componenti
+   
+  ],
   imports: [
-    CommonModule,
-    NgModule,
-    BrowserModule,
-    FormsModule,
-    PasswordModule,
+    AppComponent,
     ProdottiComponent,
     LoginComponent,
-    ProdottoModule,
-    CurrencyPipe,
-    DatePipe,
-    RouterOutlet,
+    BrowserModule,
+    FormsModule,
+    ReactiveFormsModule,
+    PasswordModule,
     BrowserAnimationsModule,
-    ReactiveFormsModule
+    HttpClientModule, // Necessario per HttpClient
+    RouterOutlet
+
   ],
-  providers :[],
-  bootstrap: [AppModule],
-  schemas: [CUSTOM_ELEMENTS_SCHEMA] // Aggiungi questa linea
-  
+  providers: [],
+  bootstrap: [AppModule], // Cambiato in AppComponent
+  schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })
 export class AppModule { }
